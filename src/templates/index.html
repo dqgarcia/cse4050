@@ -1,107 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 <title>My Page</title>
-<style>
-canvas {
-  margin: 20px;
-
-} 
-
-.vogue-brown{
-  background-color: #501021;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-}
-
-.vogue-red{
-  background-color: #8C2335;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-}
-
-.vogue-orange{
-  background-color: #AE4841;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-}
-  
-<!-- Unused so far
-.vogue-yellow{
-  background-color: #E6B15D;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-}
-
-.vogue-cyan{
-  background-color: #56A5A2;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-}
-
-.vogue-blue{
-  background-color: #1F5281;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-}
--->
-</style>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
 <div class="vogue-brown">
-<h2>Testing</h2>
-<p>One, two, three.</p>
+  <div id="navbar">
+    <a href="#home">Home</a>
+    <a href="about">About</a>
+  </div>
+  <div class="vogue-red">
+    <h2>Testing</h2>
+    <p>One, two, three.</p>
+    <div class="vogue-orange">
+      <h2>Testing</h2>
+      <p>One, two, three.</p>
+    </div>
+  </div>
 </div> 
 
-<div class="vogue-red">
-<h2>Testing</h2>
-<p>One, two, three.</p>
-</div>
-
-<div class="vogue-orange">
-<h2>Testing</h2>
-<p>One, two, three.</p>
-</div>
-
-<canvas id="myCanvas" width="1280" height="360">
-Your browser does not support the HTML canvas tag.</canvas>
-
-<script>
-var c = document.getElementById("myCanvas");
-var context = c.getContext('2d');
-
-var palette = context.createLinearGradient(0, 0, 1280, 0);
-palette.addColorStop(0 / 150, '#501021');
-palette.addColorStop(24 / 150, '#501021');
-palette.addColorStop(24 / 150, '#ffffff');
-palette.addColorStop(26 / 150, '#ffffff');
-palette.addColorStop(26 / 150, '#8C2335');
-palette.addColorStop(49 / 150, '#8C2335');
-palette.addColorStop(49 / 150, '#ffffff');
-palette.addColorStop(51 / 150, '#ffffff');
-palette.addColorStop(51 / 150, '#AE4841');
-palette.addColorStop(74 / 150, '#AE4841');
-palette.addColorStop(74 / 150, '#ffffff');
-palette.addColorStop(76 / 150, '#ffffff');
-palette.addColorStop(76 / 150, '#E6B15D');
-palette.addColorStop(99 / 150, '#E6B15D');
-palette.addColorStop(99 / 150, '#ffffff');
-palette.addColorStop(101 / 150, '#ffffff');
-palette.addColorStop(101 / 150, '#56A5A2');
-palette.addColorStop(124 / 150, '#56A5A2');
-palette.addColorStop(124 / 150, '#ffffff');
-palette.addColorStop(126 / 150, '#ffffff');
-palette.addColorStop(126 / 150, '#1F5281');
-palette.addColorStop(150 / 150, '#1F5281');
-context.fillStyle = palette;
-context.fillRect(0, 0, 1280, 360);
-</script>
 </body>
 </html>

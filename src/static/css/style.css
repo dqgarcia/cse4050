@@ -1,0 +1,58 @@
+
+.vogue-brown{
+  background-color: #501021;
+  border: 5px solid #501021;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 20px;
+}
+
+.vogue-red{
+  background-color: #8C2335;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.vogue-orange{
+  background-color: #AE4841;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.vogue-yellow{
+  background-color: #E6B15D;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.vogue-cyan{
+  background-color: #56A5A2;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.vogue-blue{
+  background-color: #1F5281;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-image: linear-gradient(to right, #1F5281 , #56A5A2);
+}
+  
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
