@@ -52,24 +52,27 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item">
-                                    <a class="nav-link" href="#home">Home</a>
+                                    <a class="nav-link" href="{% url 'Homepage' %}">Home</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="about">About</a>
+                                    <a class="nav-link" href="{% url 'About' %}">About</a>
                                  </li>
                                  {% if user.is_authenticated %}
                                  <li class="nav-item"></li>
-                                    <a class="nav-link">{{request.user}}</a>
+                                    <a class="nav-link" href="{% url 'Create a post' %}">Create Post</a>
+                                 </li>
+                                 <li class="nav-item"></li>
+                                    <a class="nav-link" class="nav-link">{{request.user}}</a>
                                  </li>
                                   <li class="nav-item">
-                                    <a href="logout" class="nav-link">Log Out</a>
+                                    <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
                                  </li>
                                   {% else %}
                                   <li class="nav-item">
-                                    <a href="register" class="nav-link">Register</a>
+                                    <a class="nav-link" href="{% url 'Registration' %}">Register</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a href="login" class="nav-link">Log In</a>
+                                    <a class="nav-link" href="{% url 'login' %}">Log In</a>
                                   </li>
                                   {% endif %}
                                  </li>
@@ -86,18 +89,9 @@
             <section class="banner_main">
                <div class="container">
                   <div class="row d_flex">
-                     <div class=" col-xl-8 col-lg-8 col-md-8 col-12-9">
-                        <div class="text-bg">
-                           <h1>Blog<br> <span class="white1">Landing Page 2019</span></h1>
-                           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                           <a href="#">Read More</a>
-                        </div>
-                     </div>
-                     <div class="col-xl-4 col-lg-4 col-md-4 col-12-3">
-                        <div class="text-img">
-                           <figure><img src="{% static 'images/box_img.png' %}" alt="#"/></figure>
-                        </div>
-                     </div>
+                     {% block content %}
+  
+                     {% endblock %}
                   </div>
                </div>
             </section>
@@ -107,9 +101,7 @@
 <head>
 <body>
 
-  {% block content %}
-  
-  {% endblock %}
+
   
 
 <!-- Optional Javascript -->

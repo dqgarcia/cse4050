@@ -1,4 +1,6 @@
 from django.shortcuts import  render, redirect
+
+from pages.models import post
 from .forms import NewUserForm
 from django.contrib.auth import login
 from django.contrib import messages

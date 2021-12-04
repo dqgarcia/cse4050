@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pages.views import home_view, about_view
+from pages.views import home_view, about_view, post_create_view
 from useraccounts.views import register_request
 
 urlpatterns = [
@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', register_request, name="Registration"),
     path('', include("django.contrib.auth.urls")), 
+    path('create/', post_create_view, name="Create a post")
 ]

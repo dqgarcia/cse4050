@@ -313,7 +313,7 @@ button {
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
 .head_top {
-     background: url(../images/banner1.png);
+     background: #2c3556;
      background-size: 100% 100%;
      background-repeat: no-repeat;
      background-position: center;
